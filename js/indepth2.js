@@ -313,21 +313,13 @@ function finish_test(total){
 		
   		var text = "";
 		if (total == 0) {
-			text = encodeURIComponent("Eres tan sensible como Buffon con la Juve, ¿También eres portero?");
+			text = encodeURIComponent("¡Lo tuyo es ser Fire! No importa que sean todos contra ti. Tú cargas al equipo completo cuando te necesita.");
 		} else if (total == 1) {
-			text = encodeURIComponent("La fiesta y el futbol corre por tu sangre, eres como el niño que nunca dejó el balón");
-		} else if (total == 2) {
-			text = encodeURIComponent("La picardía es lo tuyo, eres como Suárez, ¿No quieres tecnología en el fut?");
-		} else if (total == 3) {
-			text = encodeURIComponent("Nunca pierdes el estilo... y tampoco la arrogancia, eres como CR7");
-		} else if (total == 4) {
-			text = encodeURIComponent("Gambeteas como Messi, aunque sea en las situaciones de tu vida");
-		} else if (total == 5) {
-			text = encodeURIComponent("Eres todo un caballero y con estilo, algo así como el Xabi Alonso de la vida real");
+			text = encodeURIComponent("¡Lo tuyo es ser Ice! Ganan todos juntos por igual. Nadie es más o menos importante en el equipo.");
 		}
 		
-		var url = encodeURIComponent("http://juanfutbol.com/indepth/que-tipo-de-hombre-eres");
-		window.open("https://twitter.com/share?text="+text+"&hashtags=JFTecate&url="+url,"","width=500, height=300");
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/fire-ice");
+		window.open("https://twitter.com/share?text="+text+"&hashtags=JFNike&url="+url,"","width=500, height=300");
 	});
 }
 

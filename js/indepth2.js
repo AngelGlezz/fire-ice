@@ -313,9 +313,9 @@ function finish_test(total){
 		
   		var text = "";
 		if (total == 0) {
-			text = encodeURIComponent("¡Lo tuyo es ser Fire! No importa que sean todos contra ti. Tú cargas al equipo completo cuando te necesita.");
+			text = encodeURIComponent("¡Lo tuyo es ser Fire! Ganan todos juntos por igual. Nadie es más o menos importante en el equipo.");
 		} else if (total == 1) {
-			text = encodeURIComponent("¡Lo tuyo es ser Ice! Ganan todos juntos por igual. Nadie es más o menos importante en el equipo.");
+			text = encodeURIComponent("¡Lo tuyo es ser Ice! No importa que sean todos contra ti. Tú cargas al equipo completo cuando te necesita.");
 		}
 		
 		var url = encodeURIComponent("http://juanfutbol.com/indepth/fire-ice");

@@ -406,7 +406,7 @@
 	max-width: 700px;
 	width: 90%;
 	margin: 40px auto;
-	display: none;
+	/*display: none;*/
 	
 }
 
@@ -665,7 +665,7 @@
 	height: 50px;
 	margin: auto;
 	position: absolute;
-	top: 400px;
+	top: 500px;
 	bottom: 0;
 	left: 0;
 	right: 0;

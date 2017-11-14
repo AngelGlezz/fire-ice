@@ -216,80 +216,86 @@ $("#indepth_boton_empezar").on("click",function(){
 			"height": "auto"
 		});
 
-		$(".red").mouseenter(function(){
-			var ele = parseInt($(this).attr("ele"));
-			$(this).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
-			var bottom = $(this).next().next().children()[0];
-			$(bottom).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
-			$(this).css({"position":"relative"});		
-		});
+		var ancho = parseInt($( window ).width());
 
-		$(".hot").mouseenter(function(){
-			var parent = $(this).parent().parent().children()[0];
-			var ele = parseInt($(parent).attr("ele"));
-			$(parent).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
-			$(parent).css({"position":"relative"});
-			$(this).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
-		});
+		if (ancho >= 768) {
+			$(".red").mouseenter(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
+				var bottom = $(this).next().next().children()[0];
+				$(bottom).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
+				$(this).css({"position":"relative"});		
+			});
 
-		$(".hot").mouseleave(function(){
-			//var ele = parseInt($(".red").attr("ele"));
-			var parent = $(this).parent().parent().children()[0];
-			var ele = parseInt($(parent).attr("ele"));
-			$(parent).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-			$(parent).css({"position":"inherit"});
-			$(this).css({"background-color": "#464646", "box-shadow": "none"});					
-		})
+			$(".hot").mouseenter(function(){
+				var parent = $(this).parent().parent().children()[0];
+				var ele = parseInt($(parent).attr("ele"));
+				$(parent).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
+				$(parent).css({"position":"relative"});
+				$(this).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
+			});
 
-		$(".red").mouseleave(function(){
-			var ele = parseInt($(this).attr("ele"));
-			$(this).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-			var bottom = $(this).next().next().children()[0];
-			$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
-			$(this).css({"position":"inherit"});	
-		});
+			$(".hot").mouseleave(function(){
+				//var ele = parseInt($(".red").attr("ele"));
+				var parent = $(this).parent().parent().children()[0];
+				var ele = parseInt($(parent).attr("ele"));
+				$(parent).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				$(parent).css({"position":"inherit"});
+				$(this).css({"background-color": "#464646", "box-shadow": "none"});					
+			})
 
-		/*$(".red, .hot").mouseleave(function(){
-			if(!$(this).hasClass("disable")){
-				var ele = parseInt($(".red").attr("ele"));
-				$(".red img").attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				$(".hot").css({"background-color": "#464646", "box-shadow": "none"});
-			}
-					
-		});*/
+			$(".red").mouseleave(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				var bottom = $(this).next().next().children()[0];
+				$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
+				$(this).css({"position":"inherit"});	
+			});
 
-		$(".blue").mouseenter(function(){
-			var ele = parseInt($(this).attr("ele"));
-			$(this).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
-			var bottom = $(this).next().children()[1];
-			$(bottom).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
-			$(this).css({"position":"relative"});
-		});
+			$(".blue").mouseenter(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
+				var bottom = $(this).next().children()[1];
+				$(bottom).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
+				$(this).css({"position":"relative"});
+			});
 
-		$(".ice").mouseenter(function(){
-			var parent = $(this).parent().parent().children()[1];
-			var ele = parseInt($(parent).attr("ele"));
-			$(parent).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
-			$(parent).css({"position":"relative"});
-			$(this).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
+			$(".ice").mouseenter(function(){
+				var parent = $(this).parent().parent().children()[1];
+				var ele = parseInt($(parent).attr("ele"));
+				$(parent).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
+				$(parent).css({"position":"relative"});
+				$(this).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
 
-		});
+			});
 
-		$(".ice").mouseleave(function(){
-			var parent = $(this).parent().parent().children()[1];
-			var ele = parseInt($(parent).attr("ele"));
-			$(parent).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
-			$(parent).css({"position":"inherit"});
-			$(this).css({"background-color": "#464646", "box-shadow": "none"});			
-		});
+			$(".ice").mouseleave(function(){
+				var parent = $(this).parent().parent().children()[1];
+				var ele = parseInt($(parent).attr("ele"));
+				$(parent).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				$(parent).css({"position":"inherit"});
+				$(this).css({"background-color": "#464646", "box-shadow": "none"});			
+			});
 
-		$(".blue").mouseleave(function(){
-			var ele = parseInt($(this).attr("ele"));
-			$(this).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
-			var bottom = $(this).next().children()[1];
-			$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
-			$(this).css({"position":"inherit"});		
-		});
+			$(".blue").mouseleave(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				var bottom = $(this).next().children()[1];
+				$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
+				$(this).css({"position":"inherit"});		
+			});
+		} else {
+			$(".red img").each(function(index) {
+			  	$(this).attr("src", "images/preguntas/red"+(index+1)+".jpg");
+				//$(".blue img").attr("src", "images/preguntas/blue"+(index+1)+".jpg");
+			});
+
+			$(".blue img").each(function(index) {
+				$(this).attr("src", "images/preguntas/blue"+(index+1)+".jpg");
+			});
+			
+			
+		}
 		
 		$("#nav-bar-stats,#top-bar-wrapper,#body-wrapper").hide();
 		
@@ -318,7 +324,12 @@ $("#indepth_boton_empezar").on("click",function(){
 
 				//$(".red,.hot,.fire,.ice").unbind();
 				$(this).unbind();
-				$(this).next().unbind();
+				if($(this).hasClass("ice")){
+					$(this).prev().unbind();
+				}else{
+					$(this).next().unbind();
+				}
+				
 				$(this).parent().parent().children().unbind();
 					
 					if(respuesta.length == preguntas.length){
@@ -385,7 +396,6 @@ function finish_test(total){
   	});
 
   	$("#indepth_twittear").click(function(){
-		
   		var text = "";
 		if (total == 0) {
 			text = encodeURIComponent("¡Lo tuyo es ser Fire! Ganan todos juntos por igual. Nadie es más o menos importante en el equipo.");
@@ -395,6 +405,18 @@ function finish_test(total){
 		
 		var url = encodeURIComponent("http://juanfutbol.com/indepth/fire-ice");
 		window.open("https://twitter.com/share?text="+text+"&hashtags=JFNike&url="+url,"","width=500, height=300");
+	});
+
+	$("#indepth_facebook").click(function(){
+  		var text = "";
+		if (total == 0) {
+			text = encodeURIComponent("¡Lo tuyo es ser Fire! Ganan todos juntos por igual. Nadie es más o menos importante en el equipo.");
+		} else if (total == 1) {
+			text = encodeURIComponent("¡Lo tuyo es ser Ice! No importa que sean todos contra ti. Tú cargas al equipo completo cuando te necesita.");
+		}
+		
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/fire-ice");
+		window.open("https://facebook.com/share?text="+text+"&hashtags=JFNike&url="+url,"","width=500, height=300");
 	});
 }
 

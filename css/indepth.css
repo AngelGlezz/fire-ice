@@ -130,7 +130,7 @@
 }
 
 #indepth_page1:before {
-	background-image: url(../images/Preguntas.jpg);
+	background-image: url(../images/BG.jpg);
 	background-position: center center;
 	background-size: cover;
 	position: fixed;
@@ -174,8 +174,9 @@
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	background-image: url(../images/Portada.png);
+	background-image: url(../images/BG.jpg);
 	margin: auto;
+	background-attachment: fixed;
 }
 
 .indepth_page_content{
@@ -235,7 +236,7 @@
 }
 
 #indepth_cover .indepth_parallax_back{
-	background-image: url(../images/back1.png);
+	background-image: url(../images/BG.jpg);
 	background-position: 50% 50%;
 	background-color: white;
 	background-size: cover;
@@ -518,14 +519,18 @@
 	height: 50px;
 	background-image: url(../images/Twitter.png);
 	cursor: pointer;
-	margin: auto;
-	background-size: contain;
-	position: absolute;
-	left: 330px;
-	top: 190px;
+	float: left;
 }
 
-#indepth_twittear:hover{
+#indepth_facebook{
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/Facebook.png);
+	cursor: pointer;
+	float: right;
+}
+
+#indepth_twittear:hover, #indepth_facebook:hover{
 	opacity: .8;
 }
 
@@ -656,10 +661,14 @@
 }
 
 .inner {
-	width: 82%;
-	height: 250px;
+	width: 200px;
+	height: 50px;
 	margin: auto;
-	position: relative;
+	position: absolute;
+	top: 400px;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 #indepth_resultados {
@@ -681,17 +690,6 @@
 }
 
 /*** Movil ****/
-@media screen and (max-width:1490px){
-	#indepth_twittear {
-		left: 205px;
-	}
-}
-
-@media screen and (max-width:1180px){
-	#indepth_twittear {
-		left: 75px;
-	}
-}
 
 @media screen and (max-width:1024px) {
 	body{
@@ -701,10 +699,6 @@
 	
 	.vimeoFrame{
 		display: none;
-	}
-	
-	.inner {
-	    width: 96%;
 	}
 }
 
@@ -761,10 +755,21 @@
 	    position: relative;
 	    margin: auto;
 	}
-	.inner {
-		margin-top: 140px;
+}
+
+@media screen and (max-width: 768px) {
+	.ice.select{
+		background-color: #2db2de;
 	}
-		
+
+	.hot.select{
+		background-color: #d24545;
+	}
+
+	.indepth_respuesta_item {
+	    width: 47.9%;
+	    height: 55px;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -777,11 +782,6 @@
 	    width: 95%;
 	    position: relative;
 	    margin: auto;
-	}
-}
-@media screen and (max-width: 573px) {
-	.indepth_respuesta_item {
-	    width: 47%;
 	}
 }
 
@@ -822,16 +822,15 @@
 
 @media screen and (max-width: 420px) {
 	.indepth_respuesta_item {
-	    width: 97%;
 	    margin-left: 0px;
 	}
 
-	#indepth_twittear {
+	/*#indepth_twittear {
 		width: 35px;
 		height: 35px;
 		left: 20px;
 		top: 140px;
-	}
+	}*/
 }
 
 @media screen and (max-width: 400px) {
@@ -951,11 +950,6 @@
 		margin: 10px auto;
 	}
 	
-	#indepth_boton_empezar:hover{
-		color: #cbb400;
-		background: #fff;
-	}
-	
 	
 	#logo{
 		height: auto;
@@ -1046,8 +1040,8 @@
 		margin-top: 0px;
 	}
 
-	#indepth_twittear {
+	/*#indepth_twittear {
 		left: 80px;
 		top: 90px;
-	}
+	}*/
 }

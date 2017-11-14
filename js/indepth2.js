@@ -54,7 +54,7 @@ $("#indepth_boton_empezar").on("click",function(){
 	 var data = {
 				  "preguntas": [
 				    {
-				      "pregunta": '<img src="images/preguntas/P1.png">',
+				      "pregunta": '<img src="images/preguntas/p1.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Haces la jugada sólo",
@@ -67,7 +67,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P2.png">',
+				      "pregunta": '<img src="images/preguntas/p2.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "No pierdes la calma y buscas la mejor opción",
@@ -80,7 +80,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P3.png">',
+				      "pregunta": '<img src="images/preguntas/p3.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Busco burlar a los defensas y acabar la jugada",
@@ -93,7 +93,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P4.png">',
+				      "pregunta": '<img src="images/preguntas/p4.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Esperas el centro, seguro lo ganas",
@@ -106,7 +106,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P5.png">',
+				      "pregunta": '<img src="images/preguntas/p5.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Sales en busca del contra golpe",
@@ -119,7 +119,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P6.png">',
+				      "pregunta": '<img src="images/preguntas/p6.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "A lo panenka. ¡Hay que arriesgar!",
@@ -132,7 +132,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P7.png">',
+				      "pregunta": '<img src="images/preguntas/p7.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": " Metes golazo seguro al ángulo",
@@ -145,7 +145,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P8.png">',
+				      "pregunta": '<img src="images/preguntas/p8.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": " Haces todo lo posible para resolver el juego porque confían en ti",
@@ -158,7 +158,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P9.png">',
+				      "pregunta": '<img src="images/preguntas/p9.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Te arriesgas con una chilena para anotar. Que todos recuerden quién eres",
@@ -171,7 +171,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P10.png">',
+				      "pregunta": '<img src="images/preguntas/p10.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Bailas con tus compañeros, el gol es de todos",
@@ -343,11 +343,7 @@ $("#indepth_boton_empezar").on("click",function(){
 					}
 				return respuesta;
 			}
-			
 		});
-		
-		
-		
 });
 
 function finish_test(total){

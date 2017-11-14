@@ -469,6 +469,7 @@
 .indepth_pregunta_img{
 	width: 50%;
 	display: inline-block;
+	cursor: pointer;
 }
 
 .indepth_respuestas_cont{

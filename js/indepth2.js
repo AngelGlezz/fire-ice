@@ -70,11 +70,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p2.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "No pierdes la calma y buscas la mejor opción",
+				          "respuesta": "Sacas una jugada de magia y liberas espacios",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Sacas una jugada de magia y liberas espacios",
+				          "respuesta": "No pierdes la calma y buscas la mejor opción",
 				          "tipo": "true"
 				        }
 				      ]
@@ -96,11 +96,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p4.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Esperas el centro, seguro lo ganas",
+				          "respuesta": "Buscas el desmarque para tener un espacio más cómodo",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Buscas el desmarque para tener un espacio más cómodo",
+				          "respuesta": "Esperas el centro, seguro lo ganas",
 				          "tipo": "false"
 				        }
 				      ]
@@ -148,11 +148,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p8.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": " Haces todo lo posible para resolver el juego porque confían en ti",
+				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante.",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
+				          "respuesta": "Haces todo lo posible para resolver el juego porque confían en ti",
 				          "tipo": "false"
 				        }
 				      ]
@@ -161,7 +161,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p9.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Te arriesgas con una chilena para anotar. Que todos recuerden quién eres",
+				          "respuesta": "Nada como improvisar. Te arriesgas con una chilena para anotar",
 				          "tipo": "true"
 				        },
 				        {
@@ -223,8 +223,14 @@ $("#indepth_boton_empezar").on("click",function(){
 				var ele = parseInt($(this).attr("ele"));
 				$(this).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
 				var bottom = $(this).next().next().children()[0];
-				$(bottom).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
+				$(bottom).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031", "z-index" : "100"});
 				$(this).css({"position":"relative"});		
+			}).mouseleave(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				var bottom = $(this).next().next().children()[0];
+				$(bottom).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});
+				$(this).css({"position":"inherit"});	
 			});
 
 			$(".hot").mouseenter(function(){
@@ -232,32 +238,28 @@ $("#indepth_boton_empezar").on("click",function(){
 				var ele = parseInt($(parent).attr("ele"));
 				$(parent).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
 				$(parent).css({"position":"relative"});
-				$(this).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031"});
-			});
-
-			$(".hot").mouseleave(function(){
+				$(this).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031", "z-index" : "100"});
+			}).mouseleave(function(){
 				//var ele = parseInt($(".red").attr("ele"));
 				var parent = $(this).parent().parent().children()[0];
 				var ele = parseInt($(parent).attr("ele"));
 				$(parent).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
 				$(parent).css({"position":"inherit"});
-				$(this).css({"background-color": "#464646", "box-shadow": "none"});					
+				$(this).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});					
 			})
-
-			$(".red").mouseleave(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				var bottom = $(this).next().next().children()[0];
-				$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
-				$(this).css({"position":"inherit"});	
-			});
 
 			$(".blue").mouseenter(function(){
 				var ele = parseInt($(this).attr("ele"));
 				$(this).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
 				var bottom = $(this).next().children()[1];
-				$(bottom).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
+				$(bottom).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de", "z-index" : "100"});	
 				$(this).css({"position":"relative"});
+			}).mouseleave(function(){
+				var ele = parseInt($(this).attr("ele"));
+				$(this).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
+				var bottom = $(this).next().children()[1];
+				$(bottom).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});
+				$(this).css({"position":"inherit"});		
 			});
 
 			$(".ice").mouseenter(function(){
@@ -265,24 +267,13 @@ $("#indepth_boton_empezar").on("click",function(){
 				var ele = parseInt($(parent).attr("ele"));
 				$(parent).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
 				$(parent).css({"position":"relative"});
-				$(this).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de"});	
-
-			});
-
-			$(".ice").mouseleave(function(){
+				$(this).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de", "z-index" : "100"});	
+			}).mouseleave(function(){
 				var parent = $(this).parent().parent().children()[1];
 				var ele = parseInt($(parent).attr("ele"));
 				$(parent).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
 				$(parent).css({"position":"inherit"});
-				$(this).css({"background-color": "#464646", "box-shadow": "none"});			
-			});
-
-			$(".blue").mouseleave(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				var bottom = $(this).next().children()[1];
-				$(bottom).css({"background-color": "#464646", "box-shadow": "none"});
-				$(this).css({"position":"inherit"});		
+				$(this).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});			
 			});
 		} else {
 			$(".red img").each(function(index) {

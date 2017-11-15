@@ -439,6 +439,7 @@
 	cursor: pointer;
 	float: left;
 	padding: 20px 4px 5px 4px;
+	position: relative;
 }
 
 /*.hot:hover {

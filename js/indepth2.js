@@ -70,11 +70,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p2.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "No pierdes la calma y buscas la mejor opción",
+				          "respuesta": "Sacas una jugada de magia y liberas espacios",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Sacas una jugada de magia y liberas espacios",
+				          "respuesta": "No pierdes la calma y buscas la mejor opción",
 				          "tipo": "true"
 				        }
 				      ]
@@ -96,11 +96,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p4.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Esperas el centro, seguro lo ganas",
+				          "respuesta": "Buscas el desmarque para tener un espacio más cómodo",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Buscas el desmarque para tener un espacio más cómodo",
+				          "respuesta": "Esperas el centro, seguro lo ganas",
 				          "tipo": "false"
 				        }
 				      ]
@@ -148,11 +148,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p8.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Haces todo lo posible para resolver el juego porque confían en ti",
+				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
+				          "respuesta": "Haces todo lo posible para resolver el juego porque confían en ti",
 				          "tipo": "false"
 				        }
 				      ]

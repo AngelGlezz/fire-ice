@@ -321,6 +321,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				
 				respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
 				respuesta_cont.find('.indepth_respuesta_item').click(false);
+				$(respuesta_cont).parent().children().addClass("disable");
 
 				//$(".red,.hot,.fire,.ice").unbind();
 				$(this).unbind();
@@ -343,6 +344,81 @@ $("#indepth_boton_empezar").on("click",function(){
 					}
 				return respuesta;
 			}
+		});
+
+		$(document).on("click",".red",function(){
+				if(!$(this).hasClass("disable")){
+				var respuesta_cont = $(this).next().next();
+				var pregunta_num = respuesta_cont.attr("num");
+				var respuesta_num = $(".hot").attr("num");
+				var pregunta_obj = preguntas[pregunta_num];
+				var respuesta_obj = pregunta_obj.respuestas[respuesta_num];
+				
+				$(this).addClass("select");
+				respuesta.push(respuesta_num);
+				console.log(respuesta);
+				
+				respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
+				respuesta_cont.find('.indepth_respuesta_item').click(false);
+				$(this).parent().children().addClass("disable");
+				$(this).click(false);
+
+				//$(".red,.hot,.fire,.ice").unbind();
+				$(this).unbind();
+				$(this).next().unbind();
+				
+				$(this).parent().find('.indepth_respuestas_cont').children().unbind();
+					
+					if(respuesta.length == preguntas.length){
+						var total = countMaxValue(respuesta);
+						console.log(total);
+						window.setTimeout(function(){
+							console.log("time");
+							console.log(total);
+							finish_test(total);
+						});
+					}
+				return respuesta;
+			}
+			
+		});
+
+		$(document).on("click",".blue",function(){
+				if(!$(this).hasClass("disable")){
+				var respuesta_cont = $(this).next();
+				var pregunta_num = respuesta_cont.attr("num");
+				var respuesta_num = $(".ice").attr("num");
+				var pregunta_obj = preguntas[pregunta_num];
+				var respuesta_obj = pregunta_obj.respuestas[respuesta_num];
+				
+				$(this).addClass("select");
+				respuesta.push(respuesta_num);
+				console.log(respuesta);
+				
+				respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
+				respuesta_cont.find('.indepth_respuesta_item').click(false);
+				$(this).click(false);
+				$(this).parent().children().addClass("disable");
+				
+
+				//$(".red,.hot,.fire,.ice").unbind();
+				$(this).unbind();
+				$(this).prev().unbind();
+				
+				$(this).parent().find('.indepth_respuestas_cont').children().unbind();
+					
+					if(respuesta.length == preguntas.length){
+						var total = countMaxValue(respuesta);
+						console.log(total);
+						window.setTimeout(function(){
+							console.log("time");
+							console.log(total);
+							finish_test(total);
+						});
+					}
+				return respuesta;
+			}
+			
 		});
 });
 

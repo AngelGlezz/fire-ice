@@ -784,6 +784,10 @@
 	    position: relative;
 	    margin: auto;
 	}
+
+	.indepth_pregunta, .indepth_pregunta img{
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 550px) {
@@ -899,6 +903,14 @@
 		background-attachment: initial;
 	}
 }
+
+
+@media screen and (max-width: 414px) {
+	.indepth_pregunta_img {
+		width: 100%;
+	}
+}
+
 
 @media screen and (max-width: 375px) {
 	.indepth_pregunta_img{

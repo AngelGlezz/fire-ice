@@ -83,7 +83,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p3.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Busco burlar a los defensas y acabar la jugada",
+				          "respuesta": "Buscas burlar a los defensas y acabar la jugada",
 				          "tipo": "true"
 				        },
 				        {
@@ -148,11 +148,11 @@ $("#indepth_boton_empezar").on("click",function(){
 				      "pregunta": '<img src="images/preguntas/p8.png">',
 				      "respuestas": [
 				        {
-				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
+				          "respuesta": "Haces todo lo posible para resolver el juego porque confían en ti",
 				          "tipo": "false"
 				        },
 				        {
-				          "respuesta": "Haces todo lo posible para resolver el juego porque confían en ti",
+				          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
 				          "tipo": "false"
 				        }
 				      ]

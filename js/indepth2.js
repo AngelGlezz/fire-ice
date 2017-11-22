@@ -442,15 +442,12 @@ function finish_test(total){
 			"background-color": "#2C87AB"
 		});
 	}
-	
-	/*$("#indepth_resultados").css({
-		"visibility": "visible",
-		"position":"fixed",
-		"top": 0,
-		"left": -ventana_ancho,
-		"background-image": "url("+urlIndepth+"images/respuestas/" + img + ".png)",
-		"background-color": "#2C87AB"
-	});*/
+
+	if (total == 0) {
+		$("#store a").attr("href", "https://store.nike.com/mx/es_la/pw/hombre-rojo-f%C3%BAtbol-calzado/7puZ81eZoi3Zpd4");
+	} else {
+		$("#store a").attr("href", "https://store.nike.com/mx/es_la/pw/hombre-azul-f%C3%BAtbol-calzado/7puZahmZoi3Zpd4");
+	}
 
 	$("#indepth_resultados").animate({
 	  	"left": 0

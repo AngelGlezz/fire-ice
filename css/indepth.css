@@ -531,6 +531,22 @@
 	float: right;
 }
 
+#store {
+	width: 95px;
+	margin: auto;
+	border: 2px solid #fff;
+	padding: 7px;
+	color: #fff;
+	position: relative;
+	top: 50px;
+	cursor: pointer;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
 #indepth_twittear:hover, #indepth_facebook:hover{
 	opacity: .8;
 }
@@ -686,10 +702,6 @@
 
 /* mobile adecuations */
 
-@media screen and (max-width: 1960px) {
-	min-width: 800px;
-}
-
 /*** Movil ****/
 
 @media screen and (max-width:1024px) {
@@ -823,19 +835,16 @@
 	    max-width: 600px;
 	}
 
+	#indepth_resultados .inner {
+		top: 300px;
+	}
+
 }
 
 @media screen and (max-width: 420px) {
 	.indepth_respuesta_item {
 	    margin-left: 0px;
 	}
-
-	/*#indepth_twittear {
-		width: 35px;
-		height: 35px;
-		left: 20px;
-		top: 140px;
-	}*/
 }
 
 @media screen and (max-width: 400px) {
